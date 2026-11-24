@@ -19,3 +19,8 @@ python3 -m http.server 8000
 
 ## Editing data
 All the content lives in `js/data.js`.
+
+## Opening on a phone
+Phones can't load the separate css/js files from a downloaded `index.html`.
+Open `soaportal.html` instead: it has everything in one file.
+After editing anything, run `python3 build.py` to regenerate it.
