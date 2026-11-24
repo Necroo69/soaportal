@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusPortal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Side drawer -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="sidebar" id="sidebar" aria-label="Main menu">
+    <div class="sidebar-head">
+      <div class="brand">
+        <svg class="brand-logo" viewBox="0 0 100 100" aria-hidden="true">
+          <g transform="translate(50 50)">
+            <rect x="-30" y="-30" width="60" height="60" fill="#e53935" opacity=".9" transform="rotate(0)" />
+            <rect x="-30" y="-30" width="60" height="60" fill="#fb8c00" opacity=".85" transform="rotate(15)" />
+            <rect x="-30" y="-30" width="60" height="60" fill="#fdd835" opacity=".85" transform="rotate(30)" />
+            <rect x="-30" y="-30" width="60" height="60" fill="#43a047" opacity=".85" transform="rotate(45)" />
+            <rect x="-30" y="-30" width="60" height="60" fill="#1e88e5" opacity=".85" transform="rotate(60)" />
+            <rect x="-30" y="-30" width="60" height="60" fill="#8e24aa" opacity=".85" transform="rotate(75)" />
+            <circle r="17" fill="#fff" />
+          </g>
+        </svg>
+        <span class="brand-name">CampusPortal</span>
+      </div>
+      <button class="icon-btn" id="closeMenu" aria-label="Close menu"><i class="material-icons">arrow_back</i></button>
+    </div>
+    <div class="sidebar-role">STUDENT</div>
+    <nav class="menu" id="menu">
+      <div class="menu-group open">
+        <button class="menu-parent"><i class="material-icons">person</i><span>Personal Info.</span><i class="material-icons chev">expand_more</i></button>
+        <div class="menu-children">
+          <a href="#/personal-info" class="menu-item"><i class="material-icons">web_asset</i><span>Student Personal Info.</span></a>
+        </div>
+      </div>
+      <div class="menu-group open">
+        <button class="menu-parent"><i class="material-icons">person</i><span>Academic Info.</span><i class="material-icons chev">expand_more</i></button>
+        <div class="menu-children">
+          <a href="#/time-table" class="menu-item"><i class="material-icons">web_asset</i><span>Class Time Table</span></a>
+          <a href="#/attendance" class="menu-item"><i class="material-icons">web_asset</i><span>Class Attendance</span></a>
+          <a href="#/registered-subjects" class="menu-item"><i class="material-icons">web_asset</i><span>Registered Subjects</span></a>
+        </div>
+      </div>
+      <div class="menu-group open">
+        <button class="menu-parent"><i class="material-icons">person</i><span>Exam. Info.</span><i class="material-icons chev">expand_more</i></button>
+        <div class="menu-children">
+          <a href="#/admit-card" class="menu-item"><i class="material-icons">web_asset</i><span>Admit Card</span></a>
+          <a href="#/result" class="menu-item"><i class="material-icons">web_asset</i><span>Student Result</span></a>
+        </div>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <button class="menu-btn" id="openMenu" aria-label="Open menu"><i class="material-icons">menu</i></button>
+    <div class="marquee"><span id="welcome"></span></div>
+    <div class="user">
+      <svg class="avatar" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="32" fill="#e3e3e3" />
+        <circle cx="32" cy="25" r="11" fill="#8a8a8a" />
+        <path d="M11 54c3-11 11-16 21-16s18 5 21 16a32 32 0 0 1-42 0z" fill="#8a8a8a" />
+      </svg>
+      <span class="user-name" id="userName"></span>
+      <i class="material-icons user-caret">expand_more</i>
+    </div>
+  </header>
+
+  <div class="banner"><h1 class="banner-title" id="pageTitle"></h1></div>
+
+  <main class="content" id="app"></main>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
