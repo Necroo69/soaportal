@@ -36,16 +36,16 @@ window.PORTAL_DATA = {
 
   semesterCodes: ["ITER ODD SEM 2026-27"],
 
-  // attended / total -> the percentage is calculated automatically
+  // attended / total; "percent" (optional) overrides the calculated percentage
   attendance: {
     "ITER ODD SEM 2026-27": [
-      { sty: 5, code: "CSE3249", subject: "DESIGN PRINCIPLES OF OPERATING SYSTEMS", attended: 18, total: 35 },
-      { sty: 5, code: "CSE3544", subject: "PRACTICAL PROGRAMMING WITH C", attended: 29, total: 36 },
-      { sty: 5, code: "CSE3731", subject: "INTRODUCTION TO THE THEORY OF COMPUTATION", attended: 13, total: 24 },
-      { sty: 5, code: "CSE3751", subject: "COMPUTER NETWORKING: CONCEPTS", attended: 14, total: 31 },
-      { sty: 5, code: "CSE3967", subject: "MACHINE LEARNING CONCEPTS 1", attended: 12, total: 20 },
-      { sty: 5, code: "GET2024", subject: "INTERMEDIATE PROBLEM SOLVING - 1", attended: 8, total: 25 },
-      { sty: 5, code: "MTH3647", subject: "FUNDAMENTALS OF MACHINE INTELLIGENCE 1", attended: 16, total: 27 }
+      { sty: 5, code: "CSE3249", subject: "DESIGN PRINCIPLES OF OPERATING SYSTEMS", attended: 27, total: 35, percent: 77.93 },
+      { sty: 5, code: "CSE3544", subject: "PRACTICAL PROGRAMMING WITH C", attended: 30, total: 36, percent: 83.4 },
+      { sty: 5, code: "CSE3731", subject: "INTRODUCTION TO THE THEORY OF COMPUTATION", attended: 17, total: 24, percent: 71.34 },
+      { sty: 5, code: "CSE3751", subject: "COMPUTER NETWORKING: CONCEPTS", attended: 24, total: 31, percent: 78.9 },
+      { sty: 5, code: "CSE3967", subject: "MACHINE LEARNING CONCEPTS 1", attended: 15, total: 20, percent: 74.13 },
+      { sty: 5, code: "GET2024", subject: "INTERMEDIATE PROBLEM SOLVING - 1", attended: 14, total: 25, percent: 56 },
+      { sty: 5, code: "MTH3647", subject: "FUNDAMENTALS OF MACHINE INTELLIGENCE 1", attended: 22, total: 27, percent: 81 }
     ]
   },
 

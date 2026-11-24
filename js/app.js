@@ -19,9 +19,9 @@
   const field = (label, value, required) =>
     `<div class="field"><div class="field-label">${esc(label)}${required ? '<span class="req">*</span>' : ""}</div><div class="field-value">${esc(value)}</div></div>`;
 
-  function percent(attended, total) {
-    if (!total) return "0.0";
-    const p = Math.round((attended / total) * 10000) / 100;
+  function percent(attended, total, override) {
+    if (override == null && !total) return "0.0";
+    const p = override != null ? Number(override) : Math.round((attended / total) * 10000) / 100;
     return Number.isInteger(p) ? p.toFixed(1) : String(p);
   }
 
@@ -251,10 +251,10 @@
                 { label: "Subject Code", value: (r) => r.code },
                 { label: "Subject", value: (r) => r.subject },
                 { label: "Total Class", value: (r) => `${r.attended}/${r.total}` },
-                { label: "Attendance %", value: (r) => percent(r.attended, r.total) },
+                { label: "Attendance %", value: (r) => percent(r.attended, r.total, r.percent) },
               ],
               rows
-            )}</div>`;
+            )}<div class="demo-note">Practice copy &middot; not official SOA data</div></div>`;
           })
         );
         app.appendChild(out);
